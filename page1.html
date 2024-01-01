@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style> 
+        body {
+            background-color: darkorange;
+            color: white;
+        }  
+        button {
+            background-color: orangered;
+            border: 2px solid orange;
+            color: white;
+        }
+        button:hover {
+            background-color: indianred;
+            border: 2px solid blue;
+        }
+        input {
+            background-color: #ff4d4d;
+            border: 2px solid orange;
+            color: white;
+        }
+    </style>
+    <script>
+        var array5 = [];
+
+        function user() {
+            var inputValue = document.getElementById("array-value").value;
+            var x = parseInt(inputValue);
+            if (!isNaN(x)) {
+                array5.push(x);
+                document.getElementById("show0").innerHTML = array5;
+                document.getElementById("length").innerHTML = "The number of array elements is: " + array5.length;
+                document.getElementById("user_form").reset();
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="user_form">
+        <input type="text" id="array-value" name="array-value"><br>
+        <button type="button" onclick="user()">add-value</button>
+    </form>
+    <p id="show0"></p>
+    <p id="length"></p>
+</body>
+</html>
